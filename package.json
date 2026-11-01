@@ -1,0 +1,15 @@
+{
+  "name": "musicboard-spa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:ts": "tsc",
+    "copy:static": "cp src/index.html dist/index.html && cp -r src/styles dist/styles",
+    "build": "rm -rf dist && npm run build:ts && npm run copy:static",
+    "start": "npx serve dist -l 3000"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
